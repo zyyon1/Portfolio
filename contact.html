@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- nav bar content -->
+    <!-- navigation menu -->
     <nav>
         <div class="nav-info">
             <a href="index.html" class="name">Zyon Magalhaes</a>
             <p>UX/ID student</p>
         </div>
-        <span class="material-symbols-outlined">
-            menu
-        </span>
+        <img src="icons/hamburger.svg" alt="Menu" class="hamburger-icon" id="hamburger">
         <div class="nav-links">
             <a href="index.html">Portfolio</a>
             <a href="about.html">About</a>
@@ -25,31 +22,47 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <!-- introduction -->
-    <div class="introduction">
-        <h1>I'm Zyon.</h1>
-        <p class="position-title">Studying User Experience &amp; Interaction Design at Drexel University</p>
-        <p class="intro-paragraph">I’m a UI/UX student with a deep passion for intuitive design and seamless user experiences.
-            I believe that great design isn’t just about making things look good; it’s about solving real problems. I’m driven by the simple yet powerful goal of making people’s lives easier. I want to learn, grow, and use my skills to help individuals and businesses streamline their processes, boost efficiency, and improve morale.</p>
-    </div>
-    <!-- page title -->
-    <h1 class="title">CONTACT ME</h1>
+    <main>
+        <div class="introduction">
+            <h1>I'm Zyon.</h1>
+            <p class="position-title">Studying User Experience &amp; Interaction Design at Drexel University</p>
+            <p class="intro-paragraph">I’m a UI/UX student with a deep passion for intuitive design and seamless user experiences.
+                I believe that great design isn’t just about making things look good; it’s about solving real problems. I’m driven by the simple yet powerful goal of making people’s lives easier. I want to learn, grow, and use my skills to help individuals and businesses streamline their processes, boost efficiency, and improve morale.</p>
+        </div>
+        <!-- page title -->
+        <h1 class="title">CONTACT ME</h1>
 
-    <section class="contact-form">
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+        <section class="contact-form">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+        
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        
+                <label for="info">Info:</label>
+                <textarea id="info" name="info" placeholder="Your message..." rows="5" required></textarea>
+        
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p class="footer-name">Zyon Magalhaes</p>
+            <p>UX/ID</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/zyon-magalhaes-941a93272/" target="_blank" rel="noopener noreferrer">
+              <img src="icons/icons8-linkedin.svg" alt="LinkedIn" class="icon" />
+            </a>
+            <a href="https://github.com/zyyon1" target="_blank" rel="noopener noreferrer">
+              <img src="icons/icons8-github.svg" alt="Github" class="icon" />
+            </a>
+          </div>          
+    </footer>
     
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-    
-            <label for="info">Info:</label>
-            <textarea id="info" name="info" placeholder="Your message..." rows="5" required></textarea>
-    
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    
-
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>

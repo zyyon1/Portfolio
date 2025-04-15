@@ -14,6 +14,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-family: General Sans, sans;
     font-weight: 500;
@@ -54,7 +62,7 @@ nav {
 .nav-links {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 54px;
     left: 0;
     background-color: white;
     width: 100%;
@@ -63,7 +71,6 @@ nav {
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 10;
-    border-bottom: 1px solid darkgray;
 }
 
 .nav-links a {
@@ -96,12 +103,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 1.5rem;
+    margin: 0 2rem;
     text-align: center;
 }
 
 .intro-paragraph {
     margin-top: 1rem;
+    text-align: left;
 }
 
 .title {
@@ -112,29 +120,73 @@ nav {
 }
 
 .card {
-    background-color: lightgray;
-    padding: 1.25rem;
+    background-color: #ebebeb;
+    padding: 1rem;
     margin: 0.5rem 2rem;
-    height: 10rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-radius: 2rem;
+    gap: 0.5rem;
 }
 
 .project-type{
-    font-size: .75rem;
+    font-size: 14px;
 }
 
 .project-title {
     margin: 0.5rem;
+    margin-top: 0;
 }
 
+.project-desc {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.card-links {
+    display: flex;
+    gap: 0.75rem;
+    font-family: 'General Sans';
+}
+
+.card-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.card-links a:hover {
+    background-color: #ccc;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+}
+.download-btn {
+    background-color: #ebebeb;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    font-family: 'General Sans';
+}
 
 footer {
-    position: fixed;
+    background-color: white;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -143,7 +195,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
 }
 
 .footer-name {
@@ -152,7 +204,7 @@ footer {
 }
 
 .footer-info {
-    margin: 0 1rem;
+    margin: 0.5rem;
 }
 
 .social-icons {
@@ -189,7 +241,6 @@ footer {
 
 .contact-form label {
     font-family: General Sans, sans;
-    color: #b0b0b0;
     font-weight: bold;
     font-size: 1rem;
 }
@@ -199,13 +250,13 @@ footer {
     padding: 0.75rem 1rem;
     border: none;
     border-radius: 1rem;
-    background-color: lightgray;
+    background-color: #ebebeb;
     font-family: Gambetta, serif;
     font-size: 1rem;
 }
 
 .contact-form textarea {
-    resize: vertical;
+    height: 250px;
 }
 
 .contact-form button {
@@ -213,7 +264,7 @@ footer {
     padding: 0.5rem 2rem;
     border: none;
     border-radius: 1rem;
-    background-color: lightgray;
+    background-color: #ebebeb;
     font-family: General Sans, sans;
     font-weight: bold;
     cursor: pointer;
@@ -221,14 +272,14 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #c0c0c0;
+    background-color: #d3d3d3;
 }
 
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 2rem;
-    right: 1.5rem;
+    bottom: 3.5rem;
+    right: 1rem;
     z-index: 100;
     font-size: 1.5rem;
     background-color: lightgray;
@@ -245,3 +296,19 @@ footer {
 #scrollTopBtn:hover {
     background-color: #bdbdbd;
 }
+
+.resume {
+    margin: 1rem;
+}
+
+.product-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.case_section {
+    margin: 1rem;
+}
+

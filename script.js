@@ -1,10 +1,9 @@
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener('click', () => {
-    mobileNav.classList.toggle('open');
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
-
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 

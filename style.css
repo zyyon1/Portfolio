@@ -24,12 +24,21 @@ html, body {
 
 h1 {
     font-family: General Sans, sans;
-    font-weight: 500;
+    font-weight: 550;
 }
 
 h2 {
     font-family: General Sans, sans;
-    font-weight: 500;
+    font-weight: 550;
+}
+
+h3 {
+    font-family: General Sans, sans;
+    font-weight: 550;
+}
+
+li {
+    font-family: Gambetta, 'Times New Roman', Times, serif;
 }
 
 p {
@@ -45,10 +54,12 @@ p {
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     border-bottom: 1px solid darkgray;
+    z-index: 10;
 }
 
 .nav-info {
@@ -62,15 +73,14 @@ nav {
 .nav-links {
     display: none;
     position: absolute;
-    top: 54px;
+    top: 53px;
     left: 0;
     background-color: white;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 10;
+    border-bottom: 1px solid darkgray;
 }
 
 .nav-links a {
@@ -91,6 +101,25 @@ nav {
     display: flex;
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(6px); /* this is the blur magic */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+  
+  /* Active state */
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .name {
     font-size: 1.5rem;
     font-weight: 500;
@@ -107,9 +136,15 @@ nav {
     text-align: center;
 }
 
+.position-title {
+    font-size: 18px;
+    font-style: italic;
+}
+
 .intro-paragraph {
     margin-top: 1rem;
     text-align: left;
+    max-width: 65ch;
 }
 
 .title {
@@ -123,6 +158,7 @@ nav {
     background-color: #ebebeb;
     padding: 1rem;
     margin: 0.5rem 2rem;
+    max-width: 70ch;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -130,6 +166,7 @@ nav {
     text-align: center;
     border-radius: 2rem;
     gap: 0.5rem;
+    overflow: hidden;
 }
 
 .project-type{
@@ -142,8 +179,15 @@ nav {
 }
 
 .project-desc {
+    margin: 0 1rem;
     margin-bottom: 0.5rem;
     text-align: left;
+}
+
+.projects {
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-links {
@@ -337,11 +381,7 @@ footer {
     background-color: #bdbdbd;
 }
 
-.resume {
-    margin: 1rem;
-}
-
-.product-title {
+.product {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -352,3 +392,155 @@ footer {
     margin: 1rem;
 }
 
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+    border-top: 1px solid darkgray;
+    max-width: 95ch;
+}
+
+#name {
+    text-decoration: none;
+    color: black;
+    transition: color 0.4s ease, transform 0.4s ease;
+    transform-origin: left;
+    display: inline-block;
+}
+
+#name:hover {
+    color: 	#89CFF0;
+    transform: scale(1.2);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selfie {
+    height: 200px;
+    width: auto;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+    .resume {
+        text-align: left;
+        margin: 1rem auto;
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: unset;
+        width: auto;
+        position: unset;
+        border: none;
+    }
+
+    footer {
+        padding: 0.5rem 1rem;
+    }
+
+    .card {
+        height: 17rem;
+        position: relative;
+    }
+
+    #idm231:before {
+        content: "";
+        top: 0; left: 0; width: 100%; height: 100%;
+        position: absolute;
+        background-image: url(images/231screenshot.jpg);
+        background-size: contain;
+        opacity: 0.05;
+        pointer-events: none;
+    }
+
+    #contact-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #address {
+        vertical-align: middle;
+    }
+
+    #email {
+        vertical-align: middle;
+        
+    }
+
+    .about {
+        margin: 1rem;
+    }
+
+    #selfie {
+        height: 500px;
+        width: auto;
+    }
+
+    .about_content {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+    }
+
+    .about_content p {
+        max-width: 45ch;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #pokebanner::before {
+        content: "";
+        top: 0; left: 0; width: 100%; height: 100%;
+        position: absolute;
+        background-image: url(images/pokeball.webp);
+        background-size: contain;
+        opacity: 0.05;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .product-info {
+        align-items: baseline;
+        text-align: center;
+    }
+
+    .product h1 {
+        margin-bottom: 0;
+    }
+
+    .product h3 {
+        font-weight: 400;
+        margin-top: 0.25rem;
+    }
+
+    .product p {
+        max-width: 40ch;
+        text-align: left;
+    }
+
+    .case_section {
+        margin: auto;
+        max-width: 80ch;
+    }
+}

@@ -1,8 +1,15 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
+const overlay = document.getElementById('overlay');
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    overlay.classList.remove('active');
 });
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
